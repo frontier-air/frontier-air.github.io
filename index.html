@@ -577,7 +577,7 @@ function leaderboard() {
   const rows = M.map(m => ({m, a: agg(lbSc, m.id)})).filter(r => r.a).sort((x, y) => y.a.st - x.a.st || y.a.v - x.a.v);
   const max = Math.max(...rows.map(r => r.a.st), 0.01);
   const t = $('#lbTable'); t.replaceChildren();
-  const head = document.createElement('thead'); head.innerHTML = '<tr><th>#</th><th>Model</th><th>Strict success</th><th class="num">Validity</th><th class="num">Validity ≥ 0.9</th><th class="num">L1 coverage</th><th class="num">Answered</th></tr>'; t.appendChild(head);
+  const head = document.createElement('thead'); head.innerHTML = '<tr><th>#</th><th>Model</th><th>Strict success</th><th class="num">Validity</th><th class="num">Validity ≥ 0.9</th><th class="num">L1 coverage</th></tr>'; t.appendChild(head);
   const tb = document.createElement('tbody');
   rows.forEach((r, i) => {
     const tr = document.createElement('tr'); if (!r.m.frontier) tr.className = 'weak';
@@ -585,7 +585,7 @@ function leaderboard() {
     c('rank', i + 1);
     const md = document.createElement('div'); md.className = 'model'; const b = document.createElement('b'); b.textContent = r.m.name; const sp = document.createElement('span'); sp.textContent = r.m.provider; md.append(b, sp); c('model', md);
     const bc = document.createElement('div'); bc.className = 'barcell'; const tr2 = document.createElement('div'); tr2.className = 'track'; const f = document.createElement('div'); f.className = 'fill'; f.style.width = (r.a.st / Math.max(max, .5) * 100) + '%'; tr2.appendChild(f); const v = document.createElement('span'); v.className = 'v'; v.textContent = pct(r.a.st); bc.append(tr2, v); c('', bc);
-    c('num', r.a.v.toFixed(2)); c('num', pct(r.a.g9)); c('num', r.a.cov == null ? '–' : r.a.cov.toFixed(2)); c('num', `${r.a.n}/${r.a.total}`);
+    c('num', r.a.v.toFixed(2)); c('num', pct(r.a.g9)); c('num', r.a.cov == null ? '–' : r.a.cov.toFixed(2));
     tb.appendChild(tr);
   });
   t.appendChild(tb); $('#lbScafNote').textContent = SCNOTE[lbSc];
