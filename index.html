@@ -80,6 +80,10 @@ header.nav nav a:hover { color: var(--text-primary); text-decoration: none; }
 .btn.primary { background: var(--ink-btn); color: var(--ink-btn-text); border-color: var(--ink-btn); }
 
 /* steps */
+.rqs { margin-top: 14px; padding: 20px 24px; }
+.rqs-h { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); }
+.rqs ul { margin: 10px 0 8px; padding-left: 20px; display: grid; gap: 6px; font-size: 17px; }
+.rqs p { margin: 0; font-size: 14px; color: var(--text-secondary); }
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 8px; }
 @media (max-width: 860px) { .steps { grid-template-columns: 1fr; } }
 .step { background: var(--surface-1); border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; }
@@ -255,6 +259,15 @@ footer a { color: var(--text-secondary); }
     <div class="step"><div><span class="lv">L0</span><h3>Design the main method</h3></div><p>Can the model design the main method, or the evaluation, given a high-level research idea?</p><p class="req"><b>Tests</b> frontier AI knowledge: the topic and general practice in the field.</p></div>
     <div class="step"><div><span class="lv">L1</span><h3>Choose what to study</h3></div><p>How close are the research questions AI models consider important to the ones the authors prioritised, and where do they differ?</p><p class="req"><b>Tests</b> research taste: weighing rigor against impact to decide what is worth studying.</p></div>
     <div class="step"><div><span class="lv">L2</span><h3>Design the experiments</h3></div><p>Can the model design a valid experiment, with every detail needed to run it, to answer a given research question?</p><p class="req"><b>Tests</b> understanding of the research question, rigor, and evaluation design.</p></div>
+  </div>
+
+  <div class="card rqs" aria-label="Questions we study">
+    <div class="rqs-h">Questions we want to answer</div>
+    <ul>
+      <li>How good are models at <b>evaluation research</b>, compared with <b>training research</b>?</li>
+      <li>How good are models at <b>safety research</b>, compared with <b>capabilities research</b>?</li>
+    </ul>
+    <p>The preview's four projects are too few to settle either question; each project contributed adds the evidence. <a href="#contribute">Contribute a project</a></p>
   </div>
 
   <!-- LEADERBOARD -->
