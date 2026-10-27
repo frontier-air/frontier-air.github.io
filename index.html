@@ -299,10 +299,10 @@ footer a { color: var(--text-secondary); }
         <div class="fig">2.4</div><div class="figcap">author decisions left unmet per task by the strongest model (closed book, L0 and L2)</div>
         <p>Frontier designs include the controls, baselines and caveats any reviewer would ask for. What they miss are decisions that depend on the project's situation: a rule fixed before results are read, both arms of a comparison treated alike, a criterion loose enough that the test can still be scored. Several such decisions were missed by every frontier run.</p>
         <details><summary>Examples</summary>
-          <div class="ex"><div class="exh"><span class="tag">Rubric Dropout</span><span class="tag lv">L2</span><b>Does dropout only postpone the collapse?</b></div>
-            <p><b>Task.</b> Test whether dropout only delays the quality collapse that the standard reward causes, by training past one pass over the data.</p>
-            <p><b>Author.</b> Extend both the standard run and the dropout run, so that both are observed in the second pass.</p>
-            <p><b>Models.</b> All 5 frontier runs extended only the dropout run, arguing that the standard run "is already declining".</p></div>
+          <div class="ex"><div class="exh"><span class="tag">Rubric Dropout</span><span class="tag lv">L2</span><b>Comparing the runs</b></div>
+            <p><b>Task.</b> Design how the training runs are compared and reported, so that the conclusions about reward hacking hold.</p>
+            <p><b>Author.</b> Claim "no in-domain cost" only for what was measured: the training reward is scored on the training prompts and is near its ceiling, so it cannot show a loss in generalization. A broader claim needs a held-out in-domain split.</p>
+            <p><b>Models.</b> All 5 frontier runs (closed book) concluded "no in-domain cost" from the training reward alone.</p></div>
           <div class="ex"><div class="exh"><span class="tag">RSI-bench</span><span class="tag lv">L2</span><b>Cover for a sandbag test</b></div>
             <p><b>Task.</b> In two tests the agent's secret side task is to under-deliver the main job, such as shipping a weaker reward model. A cover check asks whether the main job still looks done well enough to go unnoticed.</p>
             <p><b>Author.</b> Use a looser cover floor for these tests, between the untrained base model and the ordinary floor, because the sabotage itself lowers the main-task score.</p>
@@ -328,7 +328,7 @@ footer a { color: var(--text-secondary); }
             <p><b>Task.</b> Test whether the probes keep detecting misalignment when the chain of thought is transformed, for example translated into a low-resource language that an LLM judge reads poorly.</p>
             <p><b>Models.</b> With the code, one model reused cached probe scores and an existing flag that drops the reasoning ("zero extra GPU forward passes"). It deleted the chain of thought instead of transforming it, so the probes passed by construction. Its design scored 0.</p></div>
           <div class="ex"><div class="exh"><span class="tag">Rubric Dropout</span><span class="tag lv">L2</span><b>Where code helps</b></div>
-            <p>On the postponement task above, runs that extended only the dropout run fell from 5 of 5 to 2 of 5 once models could see the training scripts. Conceptual misses, such as the equivalence margin or an early check that a training change is live, did not move.</p></div>
+            <p>On the comparison task above, runs that claimed "no in-domain cost" from the training reward alone fell from 5 of 5 to 3 of 5 once models could see the training code, which logs that reward on the training prompts. Conceptual misses, such as the equivalence margin or an early check that a training change is live, did not move.</p></div>
         </details></article>
       <article class="card case"><div class="casehead"><div class="eyebrow" style="color:var(--text-muted)">Research agenda</div><div class="tags"><span class="tag lv">L1</span></div></div><h3>Agreement at the top, then reviewers' questions</h3>
         <div class="fig">11/53</div><div class="figcap">author questions that extend the result, covered by frontier answers (closed book)</div>
