@@ -196,6 +196,10 @@ h2 { text-wrap: balance; font-size: clamp(26px, 3vw, 34px); letter-spacing: -.02
 .fact h4 { margin: 0 0 6px; font-size: 15px; }
 .fact p, .fact li { color: var(--text-secondary); font-size: 14px; }
 .fact ul { margin: 6px 0 0; padding-left: 18px; } .fact li { margin: 4px 0; }
+.team { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; align-items: start; }
+.team .card { padding: 20px 22px; }
+.team h3 { margin: 0 0 10px; font-size: 15px; }
+.team ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 15px; }
 .joinband { margin-top: 16px; padding: 26px; display: flex; flex-wrap: wrap; gap: 18px; align-items: center; justify-content: space-between; background: linear-gradient(120deg, var(--accent-wash), var(--accent2-wash)); }
 .joinband ol { margin: 0; padding-left: 20px; color: var(--text-secondary); font-size: 14.5px; }
 .joinband ol li { margin: 3px 0; }
@@ -232,7 +236,7 @@ footer a { color: var(--text-secondary); }
 
 <header class="nav"><div class="wrap">
   <a class="brand" href="#top"><span class="mark" aria-hidden="true"></span>FrontierAIR</a>
-  <nav aria-label="Main"><a href="#leaderboard">Leaderboard</a><a href="#tasks">Tasks</a><a href="#cases">Case studies</a><a href="#contribute">Contribute</a></nav>
+  <nav aria-label="Main"><a href="#leaderboard">Leaderboard</a><a href="#tasks">Tasks</a><a href="#cases">Case studies</a><a href="#contribute">Contribute</a><a href="#team">Team</a></nav>
   <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle dark mode">Theme</button>
 </div></header>
 
@@ -527,12 +531,20 @@ footer a { color: var(--text-secondary); }
       <div style="display:grid;gap:8px;justify-items:end"><div class="cta"><a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSecAZuEBt32Pe1-uP9CccmAfoZI0z5JM-3dEkx9h18qLSqo9g/viewform" target="_blank" rel="noopener" id="formLink">Express interest (3 min)</a></div><div class="small muted">Questions: <a href="mailto:kaiwen.zhou@scale.com">kaiwen.zhou@scale.com</a></div></div>
     </div>
   </section>
+  <section class="sec" id="team">
+    <div class="eyebrow">Team</div>
+    <h2>Who builds the benchmark</h2>
+    <div class="team">
+      <div class="card"><h3>Core contributors</h3><ul><li><a href="https://kevinz-01.github.io/" target="_blank" rel="noopener">Kaiwen Zhou</a></li><li><a href="https://ymingl.com/" target="_blank" rel="noopener">Minglai Yang</a></li><li><a href="https://scholar.google.com/citations?user=3tbp3T4AAAAJ" target="_blank" rel="noopener">Renxiong Wang</a></li><li><a href="https://www.bu.edu/cds-faculty/profile/zhengyang-shan/" target="_blank" rel="noopener">Zhengyang Shan</a></li><li><a href="https://elegantlin.github.io/" target="_blank" rel="noopener">Zonglin Di</a></li></ul></div>
+      <div class="card"><h3>Advisors</h3><ul><li><a href="https://tzhao.io/" target="_blank" rel="noopener">Tong Zhao</a></li><li><a href="https://udarimadhu.github.io/" target="_blank" rel="noopener">Udari Madhushani Sehwag</a></li></ul></div>
+    </div>
+  </section>
 </div>
 </main>
 
 <footer><div class="wrap">
   <div><div class="brand" style="font-size:15px"><span class="mark" aria-hidden="true"></span>FrontierAIR</div><div style="margin-top:6px;max-width:420px">A benchmark of research judgment, built from the decisions of real frontier AI research projects.</div></div>
-  <div style="display:flex;gap:28px;flex-wrap:wrap"><a href="#leaderboard">Leaderboard</a><a href="#tasks">Tasks</a><a href="#cases">Case studies</a><a href="#contribute">Contribute</a><span>Contact: <a href="mailto:kaiwen.zhou@scale.com">kaiwen.zhou@scale.com</a></span></div>
+  <div style="display:flex;gap:28px;flex-wrap:wrap"><a href="#leaderboard">Leaderboard</a><a href="#tasks">Tasks</a><a href="#cases">Case studies</a><a href="#contribute">Contribute</a><a href="#team">Team</a><span>Contact: <a href="mailto:kaiwen.zhou@scale.com">kaiwen.zhou@scale.com</a></span></div>
 </div></footer>
 
 <script>
