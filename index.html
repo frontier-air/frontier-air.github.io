@@ -203,6 +203,7 @@ h2 { text-wrap: balance; font-size: clamp(26px, 3vw, 34px); letter-spacing: -.02
 .fact ul { margin: 6px 0 0; padding-left: 18px; } .fact li { margin: 4px 0; }
 .team { display: grid; gap: 16px; }
 .team .card { padding: 20px 22px; }
+.team .soon { margin: 0; font-size: 15px; color: var(--text-secondary); }
 .team h3 { margin: 0 0 10px; font-size: 15px; }
 .team ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 15px; }
 .joinband { margin-top: 16px; padding: 26px; display: flex; flex-wrap: wrap; gap: 18px; align-items: center; justify-content: space-between; background: linear-gradient(120deg, var(--accent-wash), var(--accent2-wash)); }
@@ -386,7 +387,7 @@ footer a { color: var(--text-secondary); }
   <section class="sec" id="contribute">
     <div class="eyebrow">Contribute</div>
     <h2>Turn your project into tasks, or review others'</h2>
-    <p class="lead">A coding agent does the reading, drafting and checking; you make every decision. Data contributors are authors of the benchmark paper.</p>
+    <p class="lead">A coding agent does the reading, drafting and checking; you make every decision. <b>Data contributors are authors of the benchmark paper.</b></p>
     <div class="roles">
       <div class="card role"><h3>Task contributor</h3><span class="time">10 to 15 hours per paper</span>
         <p>You are an author of a recent paper and have its code repository with the git history of the work.</p>
@@ -396,7 +397,7 @@ footer a { color: var(--text-secondary); }
         <p>With a review agent, you read each task with the models' answers and grades, look for unfair rubric items and briefs that give the answer away, and rank the project's research questions independently of the author.</p></div>
     </div>
     <div class="facts">
-      <div class="card fact"><h4>Authorship</h4><ul><li>Qualify with any of: one paper with at least 5 tasks; the tasks of one paper plus one review; or at least two reviews.</li><li>Listed by points: 3 for a paper's tasks, 2 for a review.</li></ul></div>
+      <div class="card fact"><h4>Authorship</h4><ul><li>Qualify with any of: one paper with at least 5 tasks; the tasks of one paper plus one review; or at least two reviews.</li><li>Listed by points: 3 for a paper's tasks, 2 for a review.</li><li>Data contributors with more than 10 points will be highlighted.</li></ul></div>
       <div class="card fact"><h4>What is public</h4><ul><li>Tasks and their results, once reviewed. A project's tasks wait for its paper to be public.</li><li>Your code snapshots only if you allow it.</li><li>Drafts and review records stay private.</li></ul></div>
       <div class="card fact"><h4>What you need</h4><ul><li>A frontier coding agent, such as Claude Code with Opus 5.5, at your cost.</li><li>No model API budget: we run the evaluated models.</li></ul></div>
     </div>
@@ -549,6 +550,7 @@ footer a { color: var(--text-secondary); }
     <div class="team">
       <div class="card"><h3>Core contributors</h3><ul><li><a href="https://kevinz-01.github.io/" target="_blank" rel="noopener">Kaiwen Zhou</a></li><li><a href="https://ymingl.com/" target="_blank" rel="noopener">Minglai Yang</a></li><li><a href="https://scholar.google.com/citations?user=3tbp3T4AAAAJ" target="_blank" rel="noopener">Renxiong Wang</a></li><li><a href="https://www.bu.edu/cds-faculty/profile/zhengyang-shan/" target="_blank" rel="noopener">Zhengyang Shan</a></li><li><a href="https://elegantlin.github.io/" target="_blank" rel="noopener">Zonglin Di</a></li></ul></div>
       <div class="card"><h3>Advisors</h3><ul><li><a href="https://tzhao.io/" target="_blank" rel="noopener">Tong Zhao</a></li><li><a href="https://scholar.google.com/citations?user=6AS13MgAAAAJ" target="_blank" rel="noopener">Yunzhong He</a></li><li><a href="https://udarimadhu.github.io/" target="_blank" rel="noopener">Udari Madhushani Sehwag</a></li></ul></div>
+      <div class="card"><h3>Data contributors</h3><p class="soon">Coming soon</p></div>
     </div>
   </section>
 </div>
