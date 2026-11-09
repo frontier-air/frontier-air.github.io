@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FrontierAIR</title>
-<meta name="description" content="A benchmark of whether AI models can make the research decisions and designs of frontier AI research with minimal human guidance.">
+<meta name="description" content="An evaluation of whether AI models can make the research decisions and designs of frontier AI research with minimal human guidance.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -246,7 +246,7 @@ footer a { color: var(--text-secondary); }
 
 <header class="nav"><div class="wrap">
   <a class="brand" href="#top"><span class="mark" aria-hidden="true"></span><div class="bt"><div>Frontier<b class="b-ai">AI</b><b class="b-r">R</b></div><small>Frontier AI Research</small></div></a>
-  <nav aria-label="Main"><a href="#leaderboard">Leaderboard</a><a href="#tasks">Tasks</a><a href="#cases">Case studies</a><a href="#contribute">Contribute</a><a href="#team">Team</a></nav>
+  <nav aria-label="Main"><a href="#leaderboard">Results</a><a href="#tasks">Tasks</a><a href="#cases">Case studies</a><a href="#contribute">Contribute</a><a href="#team">Team</a></nav>
   <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle dark mode">Theme</button>
 </div></header>
 
@@ -255,9 +255,9 @@ footer a { color: var(--text-secondary); }
   <section class="hero">
     <span class="badge"><span class="dot"></span>Preview · 4 projects · 27 tasks</span>
     <h1>Can AI models make research decisions and designs in frontier AI research with minimal human guidance?</h1>
-    <p class="sub">AI for automated research looks more promising every month, yet most of the time we still cannot trust it to carry a research project from idea to result on its own. We built this benchmark to find out why. Each task comes from a real research project. Given the project's high-level idea, the model has to make a decision or design the author actually made. The answer is graded against rubric items written from the author's own decisions.</p>
+    <p class="sub">AI for automated research looks more promising every month, yet most of the time we still cannot trust it to carry a research project from idea to result on its own. We built this evaluation to find out why. Each task comes from a real research project. Given the project's high-level idea, the model has to make a decision or design the author actually made. The answer is graded against rubric items written from the author's own decisions.</p>
     <div class="stats"><span><b>27</b>tasks</span><span><b>4</b>projects</span><span><b>3</b>research steps</span><span><b>9</b>models</span><span><b>3</b>scaffolds</span></div>
-    <div class="cta"><a class="btn primary" href="#leaderboard">See the leaderboard</a><a class="btn" href="#contribute">Contribute a project</a><a class="btn" href="#tasks">Browse tasks</a></div>
+    <div class="cta"><a class="btn primary" href="#leaderboard">See the results</a><a class="btn" href="#contribute">Contribute a project</a><a class="btn" href="#tasks">Browse tasks</a></div>
   </section>
 
   <div class="steps" aria-label="What we test">
@@ -277,7 +277,7 @@ footer a { color: var(--text-secondary); }
 
   <!-- LEADERBOARD -->
   <section class="sec" id="leaderboard">
-    <div class="eyebrow">Leaderboard</div>
+    <div class="eyebrow">Results</div>
     <h2>A usable research design is still the exception</h2>
     <p class="lead">Strict success means a design satisfies every one of the author's decisions, so a researcher could use it as-is. The best model reaches it on 22% of the tasks closed book, and on 35% with a library of related papers.</p>
     <div class="controls"><div class="seg" id="lbScaffold" role="group" aria-label="Scaffold"></div><span class="small muted" id="lbScafNote"></span></div>
@@ -391,7 +391,7 @@ footer a { color: var(--text-secondary); }
   <section class="sec" id="contribute">
     <div class="eyebrow">Contribute</div>
     <h2>Turn your project into tasks, or review others'</h2>
-    <p class="lead">A coding agent does the reading, drafting and checking; you make every decision. <b>Data contributors who meet the threshold are recognized contributors in the benchmark paper.</b></p>
+    <p class="lead">A coding agent does the reading, drafting and checking; you make every decision. <b>Data contributors who meet the threshold are recognized contributors in the FrontierAIR paper.</b></p>
     <div class="card joinband" style="margin:0 0 16px">
       <ol><li>Fill in the <a href="https://docs.google.com/forms/d/1RXWV7t8GP10OTku-LNg8I29Mu6Negnji3a4KyzzU9to/viewform" target="_blank" rel="noopener">expression-of-interest form</a>. It takes about 3 minutes.</li><li>We select contributors and invite them to the private repository.</li><li>Start your coding agent in the repository and say "I want to create tasks from my project".</li></ol>
       <div style="display:grid;gap:8px;justify-items:end"><div class="cta"><a class="btn primary" href="https://docs.google.com/forms/d/1RXWV7t8GP10OTku-LNg8I29Mu6Negnji3a4KyzzU9to/viewform" target="_blank" rel="noopener" id="formLink">Express interest (3 min)</a></div><div class="small muted">Questions: <a href="mailto:kaiwen.zhou@scale.com">kaiwen.zhou@scale.com</a> · <a href="/terms/">Competition Terms</a></div></div>
@@ -550,7 +550,7 @@ footer a { color: var(--text-secondary); }
   </section>
   <section class="sec" id="team">
     <div class="eyebrow">Team</div>
-    <h2>Who builds the benchmark</h2>
+    <h2>Who builds FrontierAIR</h2>
     <div class="team">
       <div class="card"><h3>Core contributors</h3><ul><li><a href="https://kevinz-01.github.io/" target="_blank" rel="noopener">Kaiwen Zhou</a></li><li><a href="https://ymingl.com/" target="_blank" rel="noopener">Minglai Yang</a></li><li><a href="https://scholar.google.com/citations?user=3tbp3T4AAAAJ" target="_blank" rel="noopener">Renxiong Wang</a></li><li><a href="https://www.bu.edu/cds-faculty/profile/zhengyang-shan/" target="_blank" rel="noopener">Zhengyang Shan</a></li><li><a href="https://elegantlin.github.io/" target="_blank" rel="noopener">Zonglin Di</a></li></ul></div>
       <div class="card"><h3>Advisors</h3><ul><li><a href="https://tzhao.io/" target="_blank" rel="noopener">Tong Zhao</a></li><li><a href="https://scholar.google.com/citations?user=6AS13MgAAAAJ" target="_blank" rel="noopener">Yunzhong He</a></li><li><a href="https://udarimadhu.github.io/" target="_blank" rel="noopener">Udari Madhushani Sehwag</a></li></ul></div>
@@ -561,8 +561,8 @@ footer a { color: var(--text-secondary); }
 </main>
 
 <footer><div class="wrap">
-  <div><div class="brand" style="font-size:15px"><span class="mark" aria-hidden="true"></span><div>Frontier<b class="b-ai">AI</b><b class="b-r">R</b> <span class="b-full">(Frontier AI Research)</span></div></div><div style="margin-top:6px;max-width:420px">A benchmark of research judgment, built from the decisions of real frontier AI research projects.</div></div>
-  <div style="display:flex;gap:28px;flex-wrap:wrap"><a href="#leaderboard">Leaderboard</a><a href="#tasks">Tasks</a><a href="#cases">Case studies</a><a href="#contribute">Contribute</a><a href="#team">Team</a><a href="/terms/">Competition Terms</a><span>Contact: <a href="mailto:kaiwen.zhou@scale.com">kaiwen.zhou@scale.com</a></span></div>
+  <div><div class="brand" style="font-size:15px"><span class="mark" aria-hidden="true"></span><div>Frontier<b class="b-ai">AI</b><b class="b-r">R</b> <span class="b-full">(Frontier AI Research)</span></div></div><div style="margin-top:6px;max-width:420px">An evaluation of research judgment, built from the decisions of real frontier AI research projects.</div></div>
+  <div style="display:flex;gap:28px;flex-wrap:wrap"><a href="#leaderboard">Results</a><a href="#tasks">Tasks</a><a href="#cases">Case studies</a><a href="#contribute">Contribute</a><a href="#team">Team</a><a href="/terms/">Competition Terms</a><span>Contact: <a href="mailto:kaiwen.zhou@scale.com">kaiwen.zhou@scale.com</a></span></div>
 </div></footer>
 
 <script>
@@ -673,7 +673,7 @@ function tasksGrid() {
   const n = SITE.more.filter(x => (tLevel === 'all' || x.level === tLevel) && (tProj === 'all' || x.project === tProj)).reduce((a, x) => a + x.n, 0);
   if (n) { const d = document.createElement('article'); d.className = 'card tcard hidden-proj';
     const h = document.createElement('h3'); h.textContent = `${n} more task${n > 1 ? 's' : ''}`;
-    const p = document.createElement('p'); p.textContent = `Not shown here. The leaderboard and charts count all ${SITE.total} tasks.`; d.append(h, p); g.appendChild(d); }
+    const p = document.createElement('p'); p.textContent = `Not shown here. The results and charts count all ${SITE.total} tasks.`; d.append(h, p); g.appendChild(d); }
   const lg = $('#sqLegend'); lg.replaceChildren(); const lo = css('--seq-lo'), hi = css('--seq-hi');
   const g1 = document.createElement('span'); const grad = document.createElement('span'); grad.style.cssText = `display:inline-block;width:70px;height:10px;border-radius:3px;vertical-align:middle;margin:0 6px;background:linear-gradient(90deg,${lo},${hi})`; g1.append('validity 0', grad, '1'); lg.appendChild(g1);
   const g2 = document.createElement('span'); const s = document.createElement('span'); s.className = 'sq'; const i = document.createElement('i'); i.className = 'ok'; i.style.background = hi; s.appendChild(i); s.style.display = 'inline-grid'; s.style.verticalAlign = 'middle'; s.style.marginRight = '6px'; g2.append(s, 'strict success'); lg.appendChild(g2);
